@@ -1,0 +1,211 @@
+changed: [localhost] => {
+    "changed": true,
+    "failed": false,
+    "invocation": {
+        "module_args": {
+            "attribute_exists": null,
+            "client_cert": null,
+            "client_key": null,
+            "commit_attribute": null,
+            "commit_attributes": null,
+            "commit_state_var": null,
+            "commit_workspace": false,
+            "force_basic_auth": false,
+            "get_attribute": null,
+            "get_decrypted_attribute": null,
+            "get_decrypted_method_parameter": null,
+            "get_method_parameter": null,
+            "get_method_parameters": null,
+            "get_object_attribute_names": null,
+            "get_object_names": null,
+            "get_state_var": null,
+            "get_state_var_names": null,
+            "get_vmdb_object": null,
+            "initialize_workspace": null,
+            "manageiq_connection": {
+                "X_MIQ_Group": "EvmGroup-super_administrator",
+                "automate_workspace": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                "client_cert": null,
+                "client_key": null,
+                "force_basic_auth": false,
+                "group": "groups/99000000000002",
+                "manageiq_validate_certs": false,
+                "password": null,
+                "token": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                "url": "https://10.132.0.2",
+                "username": null
+            },
+            "method_parameter_exists": null,
+            "object_exists": null,
+            "set_attribute": {
+                "attribute": "tower_job_id",
+                "object": "root",
+                "value": 801
+            },
+            "set_attributes": null,
+            "set_encrypted_attribute": null,
+            "set_retry": null,
+            "set_state_var": null,
+            "state_var_exists": null,
+            "validate_certs": false,
+            "workspace": {
+                "changed": false,
+                "failed": false,
+                "workspace": {
+                    "actions": [
+                        {
+                            "href": "https://10.132.0.2/api/********",
+                            "method": "post",
+                            "name": "edit"
+                        },
+                        {
+                            "href": "https://10.132.0.2/api/********",
+                            "method": "post",
+                            "name": "encrypt"
+                        },
+                        {
+                            "href": "https://10.132.0.2/api/********",
+                            "method": "post",
+                            "name": "decrypt"
+                        }
+                    ],
+                    "guid": "0e725160-5df3-4006-8cb4-9bafc2918d7d",
+                    "href": "https://10.132.0.2/api/********",
+                    "id": "99000000000137",
+                    "input": {
+                        "current": {
+                            "class": "Methods",
+                            "instance": "MyInstance",
+                            "message": "create",
+                            "method": "testworkspaceattributes",
+                            "namespace": "Chain1/Service/Provisioning/StateMachines"
+                        },
+                        "method_parameters": {},
+                        "objects": {
+                            "/Chain1/Service/Provisioning/StateMachines/Methods/MyInstance": {
+                                "::miq::parent": "root"
+                            },
+                            "/ManageIQ/Service/Provisioning/StateMachines/Methods/CatalogItemInitialization": {
+                                "::miq::parent": "root"
+                            },
+                            "/ManageIQ/Service/Provisioning/StateMachines/Methods/DialogParser": {
+                                "::miq::parent": "/ManageIQ/Service/Provisioning/StateMachines/Methods/CatalogItemInitialization"
+                            },
+                            "/ManageIQ/Service/Provisioning/StateMachines/Methods/GroupSequenceCheck": {
+                                "::miq::parent": "root"
+                            },
+                            "root": {
+                                "ae_next_state": "",
+                                "ae_result": "ok",
+                                "ae_retry_server_affinity": false,
+                                "ae_state": "pre3",
+                                "ae_state_max_retries": 100,
+                                "ae_state_retries": 0,
+                                "ae_state_started": "2018-06-01 15:26:05 UTC",
+                                "ae_state_step": "main",
+                                "ae_status_state": "on_entry",
+                                "miq_group": "href_slug::groups/99000000000002",
+                                "miq_server": "href_slug::servers/99000000000001",
+                                "miq_server_id": "99000000000001",
+                                "object_name": "CatalogItemInitialization",
+                                "request": "clone_to_service",
+                                "service": "href_slug::services/99000000000316",
+                                "service_action": "Provision",
+                                "service_id": "99000000000316",
+                                "service_template_provision_task": "href_slug::request_tasks/99000000000316",
+                                "service_template_provision_task_id": "99000000000316",
+                                "tenant": "href_slug::tenants/99000000000001",
+                                "tower_job_id": 801,
+                                "user": "href_slug::users/99000000000001",
+                                "user_id": "99000000000001",
+                                "vmdb_object_type": "service_template_provision_task"
+                            }
+                        },
+                        "state_vars": {}
+                    },
+                    "options": {
+                        "auto_commit": true
+                    },
+                    "output": {
+                        "objects": {
+                            "root": {
+                                "tower_job_id": 801
+                            }
+                        },
+                        "state_vars": {}
+                    },
+                    "tenant_id": "99000000000001",
+                    "user_id": "99000000000001"
+                }
+            }
+        }
+    },
+    "workspace": {
+        "guid": "0e725160-5df3-4006-8cb4-9bafc2918d7d",
+        "href": "https://10.132.0.2/api/********",
+        "id": "99000000000137",
+        "input": {
+            "current": {
+                "class": "Methods",
+                "instance": "MyInstance",
+                "message": "create",
+                "method": "testworkspaceattributes",
+                "namespace": "Chain1/Service/Provisioning/StateMachines"
+            },
+            "method_parameters": {},
+            "objects": {
+                "/Chain1/Service/Provisioning/StateMachines/Methods/MyInstance": {
+                    "::miq::parent": "root"
+                },
+                "/ManageIQ/Service/Provisioning/StateMachines/Methods/CatalogItemInitialization": {
+                    "::miq::parent": "root"
+                },
+                "/ManageIQ/Service/Provisioning/StateMachines/Methods/DialogParser": {
+                    "::miq::parent": "/ManageIQ/Service/Provisioning/StateMachines/Methods/CatalogItemInitialization"
+                },
+                "/ManageIQ/Service/Provisioning/StateMachines/Methods/GroupSequenceCheck": {
+                    "::miq::parent": "root"
+                },
+                "root": {
+                    "ae_next_state": "",
+                    "ae_result": "ok",
+                    "ae_retry_server_affinity": false,
+                    "ae_state": "pre3",
+                    "ae_state_max_retries": 100,
+                    "ae_state_retries": 0,
+                    "ae_state_started": "2018-06-01 15:26:05 UTC",
+                    "ae_state_step": "main",
+                    "ae_status_state": "on_entry",
+                    "miq_group": "href_slug::groups/99000000000002",
+                    "miq_server": "href_slug::servers/99000000000001",
+                    "miq_server_id": "99000000000001",
+                    "object_name": "CatalogItemInitialization",
+                    "request": "clone_to_service",
+                    "service": "href_slug::services/99000000000316",
+                    "service_action": "Provision",
+                    "service_id": "99000000000316",
+                    "service_template_provision_task": "href_slug::request_tasks/99000000000316",
+                    "service_template_provision_task_id": "99000000000316",
+                    "tenant": "href_slug::tenants/99000000000001",
+                    "user": "href_slug::users/99000000000001",
+                    "user_id": "99000000000001",
+                    "vmdb_object_type": "service_template_provision_task"
+                }
+            },
+            "state_vars": {}
+        },
+        "options": {
+            "auto_commit": true
+        },
+        "output": {
+            "objects": {
+                "root": {
+                    "tower_job_id": "801"
+                }
+            },
+            "state_vars": {}
+        },
+        "tenant_id": "99000000000001",
+        "user_id": "99000000000001"
+    }
+}
