@@ -209,3 +209,13 @@ changed: [localhost] => {
         "user_id": "99000000000001"
     }
 }
+
+
+
+PAY ATTENTION 
+
+                        "method_parameters": {},
+                        "objects": {
+                            "/Chain1/Service/Provisioning/StateMachines/Methods/MyInstance": {
+                                "::miq::parent": "root"
+                            },
