@@ -76,7 +76,7 @@ reports_inventory.each do |this_reports_inventory|
 end
 
 
-# Print a list of existing reports ##
+# Print a list of existing users ##
 values_hash = {}
 values_hash['!'] = '-- select from list --'
 users_inventory = $evm.vmdb('user').all
