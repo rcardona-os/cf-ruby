@@ -53,7 +53,6 @@ end
 
 
 
-
 # Print a list of existing EMS ##
 values_hash = {}
 values_hash['!'] = '-- select from list --'
@@ -67,8 +66,14 @@ end
 
 
 
+# Print a list of existing reports ##
+values_hash = {}
+values_hash['!'] = '-- select from list --'
+reports_inventory = $evm.vmdb('miq_report').all
 
-
+reports_inventory.each do |this_reports_inventory|
+   puts "Report Name: " + this_reports_inventory.name + "  :::  " + "Report ID: " + this_reports_inventory.id.to_s
+end
 
 
 
@@ -86,8 +91,6 @@ end
 
 
 
-
-
 ## Print a list of VLans ##
 values_hash = {}
 values_hash['!'] = '-- select from list --'
@@ -100,10 +103,6 @@ hosts_inventory.each do |this_host|
     print this_host_lans.name + "\n"
   end
 end
-
-
-
-
 
 
 
