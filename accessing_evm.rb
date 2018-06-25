@@ -76,6 +76,15 @@ reports_inventory.each do |this_reports_inventory|
 end
 
 
+# Print a list of existing reports ##
+values_hash = {}
+values_hash['!'] = '-- select from list --'
+users_inventory = $evm.vmdb('user').all
+
+users_inventory.each do |this_users_inventory|
+   puts "User Name: " + this_users_inventory.name + "  :::  " + "User ID: " + this_users_inventory.id.to_s
+end
+
 
 # Print a list of VSwitches ##
 values_hash = {}
