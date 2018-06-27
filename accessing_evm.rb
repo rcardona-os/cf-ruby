@@ -4,7 +4,7 @@ $evm = MiqAeMethodService::MiqAeService.new(MiqAeEngine::MiqAeWorkspaceRuntime.n
 
 10.downto(1) { |i| puts "Countdown: #{i}" }
 
-
+${/#dialog_hosts}
 
 # This section list miq service request bundle
 miq_requests = $evm.vmdb('miq_request').all
