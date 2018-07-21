@@ -130,3 +130,30 @@ end
 values_hash.each do |key, value|
     puts key + ' : ' + value
 end
+
+
+
+EXAMPLE FOR LISTING
+
+begin
+  values_hash = {}
+  values_hash['!'] = '-- select from list --'
+  ems_inventory = $evm.vmdb('ems').all
+
+  ems_inventory.each do |this_ems_inventory|
+    values_hash[this_vms_inventory.name] = this_vms_inventory.name
+  end
+  
+    list_values = {
+    'sort_by'    => :value,
+    'data_type'  => :string,
+    'required'   => true,
+    'values'     => values_hash
+  }
+  list_values.each { |key, value| $evm.object[key] = value }
+
+ rescue => err
+  $evm.log(:error, "[#{err}]\n#{err.backtrace.join("\n")}")
+  exit MIQ_STOP
+  
+end
