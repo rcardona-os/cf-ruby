@@ -76,6 +76,20 @@ reports_inventory.each do |this_reports_inventory|
 end
 
 
+# Print a list of volumes --ex. OpenStack --##
+values_hash = {}
+values_hash['!'] = '-- select from list --'
+ems_inventory = $evm.vmdb(:Ems).all
+
+ems_inventory.each do |this_ems_inventory|
+  next if this_ems_inventory.type != "ManageIQ::Providers::StorageManager::CinderManager"
+   this_ems_inventory.cloud_volumes.each do |this_ems_storage_volume|
+     puts "Volume Name :: #{this_ems_storage_volume.name}"
+   end
+end
+
+
+
 # Print a list of existing users ##
 values_hash = {}
 values_hash['!'] = '-- select from list --'
