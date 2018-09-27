@@ -113,6 +113,17 @@ hosts_inventory.each do |this_host|
   end
 end
 
+## Print a list of Volumes ##
+values_hash = {}
+values_hash['!'] = '-- select from list --'
+volumes_inventory = $evm.vmdb(:Volume).all
+
+volumes_inventory.each do |this_volume|
+  this_volume.each do |this_host_lans|
+    puts this_host_lans.name
+  end
+end
+
 
 
 # Print a list of VLans specifically for VMWare##
