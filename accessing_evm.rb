@@ -182,3 +182,18 @@ begin
   exit MIQ_STOP
   
 end
+
+▽
+values_hash = {}
+values_hash['!'] = '-- select from list --'
+generated_hostname = ""; 8.times{generated_hostname  << (65 + rand(25)).chr}
+
+
+#value = ""; 8.times{value  << (65 + rand(25)).chr}
+
+$evm.log(:info, "Hostname generated:  #{generated_hostname} ")
+values_hash[generated_hostname] = generated_hostname
+
+values_hash.each do |key, value|
+    puts key + ' : ' + value
+end
